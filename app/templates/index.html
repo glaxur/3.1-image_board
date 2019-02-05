@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+    {%for image in images  %}
+        <div class="card" style="width: 18rem;">
+            <div class="card body">
 
-    {% for image in images %}
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="{{ photo.picture }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ photo.title }}</h5>
-                    <p class="card-text">{{ photo.description }}</p>
-                </div>
+                <h2>{{ image.title }}</h2>
+                <h4>{{ image.description }}</h4>
+                <img src = "{{ image.picture }}">
             </div>
         </div>
 
